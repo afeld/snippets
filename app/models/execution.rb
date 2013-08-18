@@ -37,7 +37,7 @@ class Execution < ActiveRecord::Base
     self.stderr = s.stderr
 
     # see https://github.com/duckinator/sicuro/issues/28
-    self.exit_status = s.stderr.presence ? 1 : 0 # s.return
+    self.exit_status = s.stderr.present? ? 1 : 0 # s.return
 
     self.status = 'complete'
     self.save!
