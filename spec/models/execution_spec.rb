@@ -1,9 +1,9 @@
 require 'spec_helper'
 
 describe Execution do
-  describe '.create' do
+  describe '.new' do
     it "should set the status to 'pending'" do
-      execution = Execution.create!
+      execution = Execution.new
       execution.status.should eq('pending')
     end
   end
