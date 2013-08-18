@@ -18,7 +18,8 @@
   - execution = @snippet.last_execution
   %b
     Result:
-  = execution.status_message
+  #{execution.status_message},
+  = execution.updated_at
   %pre
     = execution.stderr
     = execution.stdout
