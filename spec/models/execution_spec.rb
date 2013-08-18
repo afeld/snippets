@@ -1,5 +1,10 @@
 require 'spec_helper'
 
 describe Execution do
-  pending "add some examples to (or delete) #{__FILE__}"
+  describe '.create' do
+    it "should set the status to 'pending'" do
+      execution = Execution.create!
+      execution.status.should eq('pending')
+    end
+  end
 end
