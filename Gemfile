@@ -9,6 +9,10 @@ gem 'sqlite3'
 gem 'turbolinks'
 gem 'uglifier', '>= 1.3.0'
 
+group :development do
+  gem 'guard-rspec'
+end
+
 group :development, :test do
   gem 'debugger'
   gem 'rspec-rails'
