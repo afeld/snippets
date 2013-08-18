@@ -11,7 +11,17 @@
   = @snippet.description
 %p
   %b Code:
-  = @snippet.code
+  %pre
+    %code
+      = @snippet.code
+%p
+  - execution = @snippet.last_execution
+  %b
+    Result:
+  = execution.status_message
+  %pre
+    = execution.stderr
+    = execution.stdout
 
 = link_to 'Edit', edit_snippet_path(@snippet)
 \|

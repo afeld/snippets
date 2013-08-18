@@ -6,4 +6,8 @@ class Snippet < ActiveRecord::Base
   def execute
     self.executions.create!
   end
+
+  def last_execution
+    self.executions.order(created_at: :desc).first
+  end
 end

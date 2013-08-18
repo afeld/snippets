@@ -2,20 +2,16 @@
 
 %table
   %tr
-    %th Parent
     %th Title
-    %th Description
-    %th Code
+    %th Status
     %th
     %th
     %th
 
   - @snippets.each do |snippet|
     %tr
-      %td= snippet.parent_id
       %td= snippet.title
-      %td= snippet.description
-      %td= snippet.code
+      %td= snippet.last_execution.status_message
       %td= link_to 'Show', snippet
       %td= link_to 'Edit', edit_snippet_path(snippet)
       %td= link_to 'Destroy', snippet, :method => :delete, :data => { :confirm => 'Are you sure?' }
