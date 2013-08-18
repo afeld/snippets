@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'coffee-rails', '~> 4.0.0'
+gem 'delayed_job_active_record'
 gem 'haml-rails'
 gem 'jquery-rails'
 gem 'rails', '4.0.0'

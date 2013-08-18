@@ -5,7 +5,7 @@ class Execution < ActiveRecord::Base
   validates :status, inclusion: { in: STATUSES }, presence: true
 
   after_initialize :set_defaults
-  after_create :run
+  after_create :run_later
 
   private
 
@@ -23,5 +23,9 @@ class Execution < ActiveRecord::Base
 
     self.status = 'complete'
     self.save!
+  end
+
+  def run_later
+    self.delay.run
   end
 end
