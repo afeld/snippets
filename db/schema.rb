@@ -11,7 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130818045759) do
+ActiveRecord::Schema.define(version: 20130818054536) do
+
+  create_table "executions", force: true do |t|
+    t.integer  "snippet_id"
+    t.text     "stdout"
+    t.text     "stderr"
+    t.integer  "exit_status"
+    t.string   "status"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "snippets", force: true do |t|
     t.integer  "parent_id"
