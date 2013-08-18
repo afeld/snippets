@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'coffee-rails', '~> 4.0.0'
-gem 'haml'
+gem 'haml-rails'
 gem 'jquery-rails'
 gem 'rails', '4.0.0'
 gem 'sass-rails', '~> 4.0.0'

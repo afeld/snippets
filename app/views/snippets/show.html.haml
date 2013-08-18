@@ -1,0 +1,18 @@
+%p#notice= notice
+
+%p
+  %b Parent:
+  = @snippet.parent_id
+%p
+  %b Title:
+  = @snippet.title
+%p
+  %b Description:
+  = @snippet.description
+%p
+  %b Code:
+  = @snippet.code
+
+= link_to 'Edit', edit_snippet_path(@snippet)
+\|
+= link_to 'Back', snippets_path
